@@ -1,10 +1,14 @@
 //RPSGAME_H
 #ifndef RPSGAME_H
 #define RPSGAME_H
+#include <iostream>
+#include <string>
+#include <random> 
 
 class Computer { 
     private:
-      int choice;
+      std::mt19937 rng;//random number generator
+      std::uniform_int_distribution<int> dist;//generates 1,2,3
 
     public:
       void generateChoice(); // random generate choice
@@ -28,7 +32,10 @@ private:
 
 public:
     Scoreboard();
-    void addPlayerwin()
-    
+    void addPlayerwin();
+    void addComputerwin();
+    void addTie();
+    void displayScore() ; const;
+
       
 }
