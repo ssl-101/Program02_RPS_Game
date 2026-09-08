@@ -11,18 +11,14 @@ class Computer {
       std::uniform_int_distribution<int> dist;//generates 1,2,3
 
     public:
-      void generateChoice(); // random generate choice
-      int getChoice();
-}
+      Computer();
+      std::string getChoice(); // converts 1-3 to rock, paper , scissors.
+};
 
 class Player {
-private:
-      int choice;
-
 public:
-      int getChoice(); //user inputs their choice
-      // Rock(1), Paper(2), Scissors(3)
-}
+      std::string getChoice(); // returns typed string
+};
 
 class Scoreboard {
 private:
@@ -35,7 +31,18 @@ public:
     void addPlayerwin();
     void addComputerwin();
     void addTie();
-    void displayScore() ; const;
+    void displayScore() const;
 
       
+};
+class GameFlow {
+private:
+   Player player;
+   Computer computer;
+   Scoreboard scoreboard;
+
+   void gameRound(const std::string& playerChoice, const std::string& gameChice);
+
+
+   start()
 }
