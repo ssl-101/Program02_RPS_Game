@@ -53,11 +53,28 @@ void Scoreboard::displayScore() const{
     if (playerScore > computerScore){
         std::cout << "GAME WINNER: You won the game!\n";
     }
-    else if (ComputerScore > playerScore){
+    else if (computerScore > playerScore){
         std::cout << "GAME WINNER: Computer won the game!\n";
     }
     else {
         std::cout << "GAME WINNER: Tie! \n";
     }
     std::cout << "=====================================\n";
+}
+
+void GameFlow::start(){
+    std::cout << "===================================\n";
+    std::cout << "        Let's Play a Game:         \n";
+    std::cout << "      Rock, Paper, Scissors !      \n";
+    std::cout << "===================================\n";
+
+    while (true) {
+        std::string pChoice = player.getChoice();
+        if (pChoice == "quit"){
+            break;
+        }
+        std::string cChoice = computer.getChoice();
+        gameRound(pChoice, cChoice);
+    }
+    scoreboard.displayScore();
 }
