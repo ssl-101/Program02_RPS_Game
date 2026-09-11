@@ -37,3 +37,27 @@ Scoreboard::Scoreboard(): playerScore(0), computerScore(0), ties(0){}
 void Scoreboard:: addPlayerWin(){ playerScore++;}
 void Scoreboard:: addComputerWin(){computerScore++;}
 void Scoreboard:: addTie() {ties++;}
+
+void Scoreboard::displayScore() const{
+    int totalRounds = playerScore + computerScore + ties;
+    //displaying score board output
+    std::cout << "\n=========================\n";
+    std::cout << "\n       Game Results      \n";
+    std::cout << "\n=========================\n";
+    std::cout << "Total Rounds:"<< totalRounds <<"\n";
+    std::cout << "Player Wins:"<< playerScore <<"\n";
+    std::cout << "Computer Wins:"<< computerScore <<"\n";
+    std::cout << "Ties:         "<< ties << "\n";
+    std::cout << "===============================\n";
+
+    if (playerScore > computerScore){
+        std::cout << "GAME WINNER: You won the game!\n";
+    }
+    else if (ComputerScore > playerScore){
+        std::cout << "GAME WINNER: Computer won the game!\n";
+    }
+    else {
+        std::cout << "GAME WINNER: Tie! \n";
+    }
+    std::cout << "=====================================\n";
+}
