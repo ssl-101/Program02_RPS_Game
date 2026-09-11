@@ -30,3 +30,10 @@ std::string Computer::getChoice() {
  
 return choice;
     }
+
+// Scoreboard
+Scoreboard::Scoreboard(): playerScore(0), computerScore(0), ties(0){}
+
+void Scoreboard:: addPlayerWin(){ playerScore++;}
+void Scoreboard:: addComputerWin(){computerScore++;}
+void Scoreboard:: addTie() {ties++;}

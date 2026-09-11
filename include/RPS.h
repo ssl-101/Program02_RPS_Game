@@ -28,8 +28,8 @@ private:
 
 public:
     Scoreboard();
-    void addPlayerwin();
-    void addComputerwin();
+    void addPlayerWin();
+    void addComputerWin();
     void addTie();
     void displayScore() const;
 
