@@ -8,7 +8,7 @@
 class Computer { 
     private:
       std::mt19937 rng;//random number generator
-      std::uniform_int_distribution<int> dist;//generates 1,2,3
+      std::uniform_int_distribution<int> dist{1,3};//generates 1,2,3
 
     public:
       Computer();
@@ -41,8 +41,10 @@ private:
    Computer computer;
    Scoreboard scoreboard;
 
-   void gameRound(const std::string& playerChoice, const std::string& gameChice);
+   void gameRound(const std::string& playerChoice, const std::string& gameChoice);
 
+public:
+  void start();
+};
 
-   start()
-}
+#endif 
