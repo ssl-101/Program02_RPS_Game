@@ -62,7 +62,30 @@ void Scoreboard::displayScore() const{
     std::cout << "=====================================\n";
 }
 
-void GameFlow::start(){
+void GameFlow::gameRound(const std::string& pChoice, const std::string& cChoice){
+              std::cout << "\n You chose:" <<pChoice <<"\n";
+              std::cout << "\n Computer Chose:" << cChoice <<'\n';
+
+              if (pChoice == cChoice){
+                  std::cout << " It's a tie!\n";
+                  scoreboard.addTie()
+
+              }
+              else if ((pChoice == "rock" && cChoice == "scissors")
+                       (pChoice == "paper" && cChoice == "rock")
+                       (pChoice == "scissors" && cChoice == "paper")){
+                    std::cout << "You win this round!\n";
+                    scoreboard.addPlayerWin();
+              }
+              else {
+                std::cout<< "Computer wins this round!\n";
+                scoreboard.addComputerWin();
+
+              }
+            
+
+
+void GameFlow::start() {
     std::cout << "===================================\n";
     std::cout << "        Let's Play a Game:         \n";
     std::cout << "      Rock, Paper, Scissors !      \n";
