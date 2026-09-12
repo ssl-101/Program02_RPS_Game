@@ -68,11 +68,11 @@ void GameFlow::gameRound(const std::string& pChoice, const std::string& cChoice)
 
               if (pChoice == cChoice){
                   std::cout << " It's a tie!\n";
-                  scoreboard.addTie()
+                  scoreboard.addTie();
 
               }
-              else if ((pChoice == "rock" && cChoice == "scissors")
-                       (pChoice == "paper" && cChoice == "rock")
+              else if ((pChoice == "rock" && cChoice == "scissors") ||
+                       (pChoice == "paper" && cChoice == "rock") ||
                        (pChoice == "scissors" && cChoice == "paper")){
                     std::cout << "You win this round!\n";
                     scoreboard.addPlayerWin();
@@ -82,6 +82,7 @@ void GameFlow::gameRound(const std::string& pChoice, const std::string& cChoice)
                 scoreboard.addComputerWin();
 
               }
+            }
             
 
 
